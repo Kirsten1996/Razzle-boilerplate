@@ -68,7 +68,7 @@ server
         <meta name="description" content="Wilderness holdings">
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta charSet='utf-8' />
-            <title>Website</title>
+            <title>Tribeca</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             ${
               assets.client.css
