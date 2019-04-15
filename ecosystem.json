@@ -1,0 +1,23 @@
+{
+  "apps": [
+    {
+      "name": "wilderness-holdings",
+      "script": "build/server.js"
+    }
+  ],
+  "deploy": {
+    "staging": {
+      "user": "bnryadmin",
+      "host": "192.168.2.183",
+      "ref": "origin/develop",
+      "repo": "git@gitlab.bnry.digital:wilderness-safaris/wilderness-holdings.git",
+      "path": "/home/bnryadmin/wilderness-holdings",
+      "ssh_options": [
+        "StrictHostKeyChecking=no",
+        "PasswordAuthentication=no",
+        "ForwardAgent=yes"
+      ],
+      "post-deploy": "npm install && npm run build && pm2 startOrGracefulReload ecosystem.json"
+    }
+  }
+}

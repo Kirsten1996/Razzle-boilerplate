@@ -1,0 +1,42 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './breakpoints.scss';
+@import './layout.scss';
+
+@mixin bp($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}
+@mixin max-bp($screen) {
+  @media (max-width: $screen - 1 +'px') {
+    @content;
+  }
+}
+
+*[class$=-inner] {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5em;
+}
+
+input {
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

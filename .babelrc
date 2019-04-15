@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "razzle/babel",
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "loadable-components/babel",
+    "react-hot-loader/babel",
+    "transform-class-properties",
+    "transform-decorators-legacy"
+  ]
+}
